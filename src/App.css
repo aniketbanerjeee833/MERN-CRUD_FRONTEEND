@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.common-heading{
+   text-align: center;
+}
+/*INPUT RADIO CHECKTYPES*/
+#gender, #status{
+    cursor: pointer;
+  
+}
+.grid{
+    display: grid;
+}
+.grid-two-cols{
+    grid-template-columns: repeat(2,1fr);
+ 
+}
+.grid-four-cols{
+    grid-template-columns: repeat(4,1fr);
+}
+.grid-four-rows{
+    grid-template-rows: 0.2fr 0.4fr 1fr 0.2fr;
+}
+
+.grid-seven-cols{
+    grid-template-columns: 0.2fr 0.4fr 0.4fr 0.2fr 0.3fr 0.2fr 0.2fr ;
+}
+
+.grid-three-cols{
+    grid-template-columns: repeat(3,1fr);
+}
+.container{
+  padding: 2rem 3rem;
+}
+
+.submit-btn{
+    background-color: blue;
+    color: white;
+}
+.common-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width:100px;
+    border-radius: 50%;
+    height: 100px;
+  margin: 0 auto;
+}

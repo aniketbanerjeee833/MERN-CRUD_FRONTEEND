@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0
+}
+
+.form{
+    border: 1px solid black;
+}
+.register-form-left
+{
+    border: 1px solid black;
+    display: flex; 
+    flex-direction: column;
+    gap:1rem
+}
+.gender-select{
+    display: flex; 
+    flex-direction: column;
+}
+
+.register-form-right
+{
+    border: 1px solid black;
+    display: flex; 
+    flex-direction: column;
+    gap:1rem
+}

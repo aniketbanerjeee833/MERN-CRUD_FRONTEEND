@@ -1,0 +1,131 @@
+
+.grids-two-rows{
+    grid-template-rows: 0.1fr 1fr;
+}
+.top-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-btn{
+    background-color:green;
+    width:100px;
+height:30px;
+
+}
+
+.top-search-div{
+display: flex;
+gap:10px
+}
+#top-div-input-search{
+    width:200px;
+    height:30px; 
+    padding-left: 10px; 
+}
+.mid-div{
+    border: 1px solid black;
+    height: 100px;
+}
+
+.add-btn{
+width:150px;
+height:50px;
+cursor: pointer;
+background-color: blue;
+color: white;
+font-size: 1rem;
+}
+/*START OF BOTTOM DIV*/
+table,th,td{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+.trow-div{
+    place-items: center;
+ 
+}
+th,td{
+    padding:5px 10px 5px 10px
+}
+option{
+    cursor: pointer;
+}
+.thead-div{
+
+    border: 1px solid black;
+}
+.primary{
+    color:black;
+    background-color: blue;
+    cursor: pointer;
+
+}
+.danger{
+    color:black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.new, .not-new{
+    color:black;
+    background-color: blue;
+    cursor: pointer;
+    opacity:0.5
+}
+.active{
+    opacity:1
+}
+
+.td-buttons{
+    display: flex;
+   gap:10px;
+  
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    & button{
+        background-color: blue;
+        width:100px;
+        color: white;
+        cursor: pointer;
+
+    }
+}
+/*FORTH DIV*/
+.fourth-div{
+
+    display: flex;
+    justify-content: flex-end;
+}
+.pagination{
+    display: flex;  
+
+    & button{
+        height: 30px;
+        width:50px
+    }
+}
+
+.alert-div{
+    border: 2px solid red;
+    width:200px;
+    height:50px;
+
+    & p{
+color:black
+    }
+}
+
+.pagination{
+    & button{
+        cursor:pointer;
+        background-color: blue;
+        color: white;
+    }
+    & p{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
