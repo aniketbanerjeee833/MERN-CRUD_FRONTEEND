@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {useNavigate} from "react-router-dom"
 import axios from 'axios';
 import { useAddDataContext } from '../../Components/Context/Context';
+import { BASE_URL } from '../../Components/Services/helper';
 
 
 export default function Register() {
@@ -94,7 +95,7 @@ export default function Register() {
     
 
    
-      const response=await axios.post(`${url}/user/register`,data)
+      const response=await axios.post(`${BASE_URL}/user/register`,data)
       console.log(response)
 
       if(response.data.success=== true){

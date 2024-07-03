@@ -1,20 +1,21 @@
 import React from 'react'
 import "../Home/Home.css"
-import { useAddDataContext } from './Context/Context'
+
 import { NavLink, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { ToastContainer, toast } from "react-toastify"
+import { BASE_URL } from './Services/helper'
 
 export default function Tables({displayUserData,deleteUser,userGet,page}) {
 
-  const{url}=useAddDataContext();
+
   const{id}=useParams();
   //CHANGE THE STATUS AT FRONTEND
 const handleChange=async(id,status)=>
 {
   console.log(id,status)
   try{
-    const response=await axios.put(`${url}/user/status/${id}`,{status})
+    const response=await axios.put(`${BASE_URL}/user/status/${id}`,{status})
     console.log(response)
 if(response.data.success===true)
   {
@@ -74,7 +75,7 @@ toast.success("Status Updated")
    
      </button>
       </td>
-      <td>  <img src={`${url}/uploads/${profile}`} alt="img" /></td>
+      <td>  <img src={`${BASE_URL}/uploads/${profile}`} alt="img" /></td>
       {/* <td> <select id="select" >
       <option value="View">
       <NavLink to={`/userprofile/${_id}`}>

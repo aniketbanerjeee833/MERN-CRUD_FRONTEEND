@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
 const addData = createContext();
-const url="http://localhost:5000"
+
 const AddDataProvider=({children})=>
 {
 
@@ -9,7 +9,7 @@ const AddDataProvider=({children})=>
     const[updatedUserData,setUpdatedUserData]=useState("")
     const [deleteData, setDeleteData] = useState("");
     return (
-    <addData.Provider value={{userAdd,setUserAdd,url,updatedUserData,setUpdatedUserData,deleteData,setDeleteData}}>
+    <addData.Provider value={{userAdd,setUserAdd,updatedUserData,setUpdatedUserData,deleteData,setDeleteData}}>
     
 {children}
     </addData.Provider>)

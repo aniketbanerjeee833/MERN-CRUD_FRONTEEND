@@ -6,10 +6,10 @@ import { useAddDataContext } from '../Components/Context/Context';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 import {  toast } from 'react-toastify';
-
+import { BASE_URL } from '../Components/Services/helper';
 import Pagination from '../Components/Pagination';
 export default function Home() {
-  const{url,deleteData,setDeleteData,userAdd,setUserAdd,updatedUserData,setUpdatedUserData}=useAddDataContext();
+  const{deleteData,setDeleteData,userAdd,setUserAdd,updatedUserData,setUpdatedUserData}=useAddDataContext();
   console.log(userAdd)
   const[displayUserData,setDisplayUserData]=useState("");
   const[search,setSearch]=useState("");
@@ -24,7 +24,7 @@ const[pageCount,setPageCount]=useState(0)
   const deleteUser=async(id)=>
     {
       try{
-        const response=await axios.delete(`${url}/user/delete/${id}`)
+        const response=await axios.delete(`${BASE_URL}/user/delete/${id}`)
         userGet()
         setDeleteData(response.data.deletedUser)
 
@@ -64,7 +64,7 @@ const[pageCount,setPageCount]=useState(0)
   {
     try{
     
-  const response=await axios.get(`${url}/user/details?search=${search}&gender=${gender}&status=${status}&sort=${sort}&page=${page}`);
+  const response=await axios.get(`${BASE_URL}/user/details?search=${search}&gender=${gender}&status=${status}&sort=${sort}&page=${page}`);
   console.log(response)
 ;
   

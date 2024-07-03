@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useAddDataContext } from '../../Components/Context/Context';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { BASE_URL } from '../../Components/Services/helper';
 
 export default function Edit() {
   const[imgData,setImgData]=useState("")
@@ -97,7 +98,7 @@ const submitUserData = async(e) => {
       data.append("location",location)
    
       //UPDATE DATA ON CLICK OF SUBMIT BTN
-      const response=await axios.put(`${url}/user/edit/${id}`,data)
+      const response=await axios.put(`${BASE_URL}/user/edit/${id}`,data)
       console.log(response)
       if(response.data.success===true)
         {

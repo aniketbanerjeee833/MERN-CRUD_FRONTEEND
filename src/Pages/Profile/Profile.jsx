@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import "./Profile.css"
 import { useParams } from 'react-router-dom'
-import { useAddDataContext } from '../../Components/Context/Context'
+
 import axios from 'axios'
 import moment from "moment"
+import { BASE_URL } from '../../Components/Services/helper'
 
 export default function Profile() {
   const[singleUserProfile,setSingleUserProfile]=useState({})
-  const{url}=useAddDataContext()
+ 
   const{id}=useParams();
   const userProfileGet=async()=>
   {
 
 try{
-  const response=await axios.get(`${url}/user/${id}`);
+  const response=await axios.get(`${BASE_URL}/user/${id}`);
   console.log(response)
   if(response.data.success===true)
   {
@@ -34,7 +35,7 @@ userProfileGet()
     <div className='profile-card container grid grid-two-rows'>
     
     <div className='common-image'>
-        <img src={`${url}/uploads/${singleUserProfile.profile}`}/>
+        <img src={`${BASE_URL}/uploads/${singleUserProfile.profile}`}/>
         </div>
         <div className="profile-user-details">
             <h3>{singleUserProfile.fname+singleUserProfile.lname}</h3>
